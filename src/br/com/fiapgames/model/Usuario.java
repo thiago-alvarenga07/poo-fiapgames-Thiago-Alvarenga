@@ -2,17 +2,49 @@ package br.com.fiapgames.model;
 // Classe que representa um usuário do sistema
 public class Usuario {
     // Atributos do usuário
-    public String nome;
-    public String cpf;
-    public String email;
-    public double saldo;
+    private String nome;
+    private String cpf;
+    private String email;
+    private double saldo;
 
     public Usuario(String nome, String cpf, String email) {
-        this.nome = nome;
+        this.setNome(nome);
         this.cpf = cpf;
-        this.email = email;
-        this.saldo = 0.0;
+        this.setEmail(email);
+        this.setSaldo(0.0); // Saldo inicial do usuário é zero
+    }
 
+    // Método para leitura do saldo do usuário
+    public double getSaldo() {
+        return this.saldo;
+    }
+
+    private void setSaldo(double valor) {
+        if (valor > 0) {
+            this.saldo = valor;
+        } else {
+            System.out.println("Erro de segurança: O saldo deve ser um valor positivo.");
+        }
+    }
+
+    public String getCpf() {
+        return this.cpf;
+    }
+
+    public String getEmail() {
+        return this.email;
+    }
+
+    public String getNome() {
+        return this.nome;
+    }
+
+    private void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    private void setEmail(String email) {
+        this.email = email;
     }
 
     public void adicionarSaldo(double valor) {
@@ -21,7 +53,7 @@ public class Usuario {
             this.saldo += valor;
             System.out.println("Saldo atualizado: R$ " + this.saldo);
         } else {
-            System.out.println("Erro: O valor a ser adicionado deve ser positivo.");
+            System.out.println("Erro de segurança: O valor a ser adicionado deve ser positivo.");
         }
     }
 
