@@ -11,7 +11,7 @@ public class Produto {
         this.nome = nome;
         this.setPreco(preco);
         this.id = id;
-        System.out.println("Produto: " + this.nome + " adicionado com o id: " + this.id);
+        System.out.println("Produto " + this.nome + " adicionado com o id: " + this.id);
     }
 
     public String getNome() {

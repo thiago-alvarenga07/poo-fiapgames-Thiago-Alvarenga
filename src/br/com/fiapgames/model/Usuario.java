@@ -20,7 +20,7 @@ public class Usuario {
     }
 
     private void setSaldo(double valor) {
-        if (valor > 0) {
+        if (valor >= 0) {
             this.saldo = valor;
         } else {
             System.out.println("Erro de segurança: O saldo deve ser um valor positivo.");
