@@ -21,4 +21,9 @@ public class Playstation extends Produto {
             return this.getPreco() * 0.90; // 10% de desconto para a versão digital
         }
     }
+
+    @Override
+    public void exibirDescricao() {
+        System.out.println("Esse produto é um console de mesa.");
+    }
 }

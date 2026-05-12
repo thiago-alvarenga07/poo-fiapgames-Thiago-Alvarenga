@@ -1,30 +1,33 @@
 package br.com.fiapgames.main;
 // Importando as classes necessárias para o funcionamento do sistema
 import br.com.fiapgames.model.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class SistemaPrincipal {
     
     public static void main(String[] args) {
-       //Criando uma lista para armazenar os produtos
-        List<Produto> produtosDisponiveis = new ArrayList<>();
+        //Criando objetos concretos
+        System.out.println("Teste de classes abstratas");
+        System.out.println();
 
-        // Criando alguns produtos e adicionando à lista
+        Produto mouse = new Mouse("Mouse Logitech", 120.0, 1, 16000);
+        Produto playstation = new Playstation("PlayStation 5", 4500.0, 2, true);
 
-        produtosDisponiveis.add(new Mouse("Mouse Logitech", 199.90, 1, 16000));
-        produtosDisponiveis.add(new Playstation("PlayStation 5", 4999.90, 3, true));
+        System.out.println("Descrição dos produtos:");
+        mouse.exibirDescricao();
+        playstation.exibirDescricao();
 
-        for (Produto produto : produtosDisponiveis) {
-            System.out.println("Produto: " + produto.getNome());
-            System.out.println("Preço original: R$ " + produto.getPreco());
-            double precoComDesconto = produto.calcularDesconto();
-            if (precoComDesconto < produto.getPreco()) {
-                System.out.println("Preço com desconto: R$ " + precoComDesconto);
-            } else {
-                System.out.println("Sem desconto disponível para este produto.");
-            }
-            System.out.println("-----------------------------");
+        System.out.println();
+        System.out.println("=== Poliformismo com classe abstrata ===");
+        
+        Produto[] produtos = new Produto[] {
+            new Mouse("Mouse Gamer", 150.0, 3, 12000),
+            new Playstation("PlayStation 5", 4000.0, 4, false),
+            new Mouse("Mouse Simples", 50.0, 5, 8000)
+        };
+
+        for (Produto x : produtos) {
+            x.exibirDescricao();
+            System.out.println("---");
         }
     }
 }

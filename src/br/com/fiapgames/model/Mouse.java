@@ -34,4 +34,8 @@ public class Mouse extends Produto {
         }
     }
     
+    @Override
+    public void exibirDescricao() {
+        System.out.println("Esse produto é um periférico de computador.");
+    }
 }
