@@ -65,6 +65,8 @@ mau intencionada, além de facilitar a alteração dos métodos, pois fica tudo 
 além de que você pode colocar um alerta no método para escrever quem mudou o saldo e quanto foi alterado,
 possibilitando maior controle sobre a segurança.
 
+---
+
 ### Aula 3 - Encapsulamento
 
 **Pergunta:** "No nosso código, os atributos são `private`, mas os métodos `getSaldo\(\)` e `getNome\(\)` 
@@ -81,6 +83,8 @@ através do método set podemos definir ou alterar o valor de uma váriavel o ge
 criado para podermos utiliza-lo no sistema principal para exibir as informações ao usuário 
 só podemos alterar o valor de uma variável através de um método que valide antes se podemos ou não
 mexer na informação.
+
+---
 
 ### Aula 4 - Construtores
 
@@ -102,6 +106,8 @@ ele passa por uma verificação para que possa ser alterado então não possibil
 alteração tão facilmente da placa, isso demonstra porque não podemos gerar Getters e Setters 
 automaticamente, pois dependendo da variável ela pode ter ou não um método set.
 
+---
+
 ### Aula 5 - Associação
 
 **Pergunta:** ""No construtor da `Viagem`, nós exigimos o objeto inteiro \(`Passageiro solicitante`\). 
@@ -117,6 +123,8 @@ em algum outro momento da viagem, o construtor pode precisar de alguma outra inf
 do passageiro, como no exemplo dado na pergunta, no momento em que o saldo será descontado 
 para realizar o pagamento da viagem, além de que, se o sistema possuir duas pessoas com o mesmo nome,
 se tivermos acesso a todas as outras informações do passageiro poderemos diferencia-las.
+
+---
 
 ### Aula 6 - Herança
 
@@ -134,6 +142,8 @@ pois toda e qualquer modificação precisa passar pelos filtros e validações q
 Assim, garantimos que o objeto nunca entre em um estado inválido, mantendo o sistema padronizado e protegido 
 contra erros acidentais de outros programadores que herdarem seu código.
 
+---
+
 ### Aula 7 - Poliformismo
 
 **Pergunta:** No nosso loop `for \(Veiculo veiculo : frota\)`, a variável `veiculo` é do tipo genérico `Veiculo`. 
@@ -148,6 +158,8 @@ ele só permite acessar o que está explicitamente declarado na classe Veiculo.
 O compilador não "adivinha" que ali dentro existe um Carro ou uma Moto com métodos extras,
 impossibilitando chamar a mãe no loop.
 
+---
+
 ### Aula 8 - Classes Abstratas
 
 **Pergunta:** "Pense no mundo real: Faz sentido existir um objeto que é APENAS 'Veículo' sem ser um tipo específico? 
@@ -158,6 +170,8 @@ deduz isso sozinho?
 
 Pense: Se esquecermos de colocar `abstract`, qual o risco que corremos? Alguém pode criar `new Veiculo\(\)` 
 e quebrar a lógica do nosso sistema?
+
+---
 
 **Resposta:**
 O Java não deduz sozinho pois o nome da classe é algo que é criado pelo programador 
