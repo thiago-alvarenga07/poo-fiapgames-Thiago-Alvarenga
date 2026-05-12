@@ -6,6 +6,7 @@ public class Produto {
     private String nome;
     private double preco;
     private int id;
+    private double desconto;
 
     public Produto(String nome, double preco, int id) {
         this.nome = nome;
@@ -41,5 +42,10 @@ public class Produto {
 
     public int getId() {
         return this.id;
+    }
+
+    public double calcularDesconto() {
+        System.out.println("O desconto não pode ser aplicado para um produto genérico.");
+        return 0.0;
     }
 }

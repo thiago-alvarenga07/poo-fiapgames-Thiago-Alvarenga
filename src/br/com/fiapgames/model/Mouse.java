@@ -23,5 +23,15 @@ public class Mouse extends Produto {
             System.out.println("Erro de segurança: O DPI deve ser um valor positivo.");
         }
     }
+
+    @Override
+    public double calcularDesconto() {
+        // Exemplo de regra de desconto específica para Mouse
+        if (this.getPreco() > 150) {
+            return this.getPreco() * 0.90; // 10% de desconto para mouses acima de R$150
+        } else {
+            return this.getPreco(); // Sem desconto para mouses com preço igual ou inferior a R$150
+        }
+    }
     
 }

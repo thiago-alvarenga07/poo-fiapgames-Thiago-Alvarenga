@@ -12,4 +12,13 @@ public class Playstation extends Produto {
     public boolean isHasDisco() {
         return this.hasDisco;
     }
+
+    @Override
+    public double calcularDesconto() {
+        if (hasDisco) {
+            return this.getPreco() * 0.95; // 5% de desconto para a versão com disco
+        } else {
+            return this.getPreco() * 0.90; // 10% de desconto para a versão digital
+        }
+    }
 }
