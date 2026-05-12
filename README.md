@@ -171,14 +171,14 @@ deduz isso sozinho?
 Pense: Se esquecermos de colocar `abstract`, qual o risco que corremos? Alguém pode criar `new Veiculo\(\)` 
 e quebrar a lógica do nosso sistema?
 
----
-
 **Resposta:**
 O Java não deduz sozinho pois o nome da classe é algo que é criado pelo programador 
 quem deve interpretar se o que está sendo criado é abstrato ou não é o próprio 
 desenvolvedor. Ao usar abstract, você impõe uma trava de segurança o Java impede a 
 criação de objetos genéricos e obriga todas as subclasses a implementarem os 
 comportamentos necessários.
+
+---
 
 ### Aula 9 - Interfaces
 
